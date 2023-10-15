@@ -43,10 +43,10 @@ It is a basic **Music Player** App written in Javascript. The songs and other me
 l
 # Demo
 
-![demo1]("https://github.com/ikeicg/MP-Project/blob/demoimg/demo1.png")
+![demo1](https://github.com/ikeicg/MP-Project/blob/demoimg/demo1.png)
 
-![demo2]("https://github.com/ikeicg/MP-Project/blob/demoimg/demo2.png")
+![demo2](https://github.com/ikeicg/MP-Project/blob/demoimg/demo2.png)
 
-![demo3]("https://github.com/ikeicg/MP-Project/blob/demoimg/demo3.png")
+![demo3](https://github.com/ikeicg/MP-Project/blob/demoimg/demo3.png)
 
-![demo4]("https://github.com/ikeicg/MP-Project/blob/demoimg/demo4.png")
+![demo4](https://github.com/ikeicg/MP-Project/blob/demoimg/demo4.png)
