@@ -44,11 +44,10 @@ It is a basic **Music Player** App written in Javascript. The songs and other me
 
 # Demo
 
-![demo4](https://github.com/ikeicg/MP-Project/assets/125681815/f274d8e5-fa23-4550-9a44-40289e029c76)
-![demo3](https://github.com/ikeicg/MP-Project/assets/125681815/decebd30-a10f-49e6-82e7-edb82d8e6b4f)
-![demo2 1](https://github.com/ikeicg/MP-Project/assets/125681815/4db0fd87-248a-49c2-a3e8-c79d0819a536)
 ![demo1](https://github.com/ikeicg/MP-Project/assets/125681815/90071cf7-6704-4127-aba3-6e7b8865e70f)
-
+![demo2 1](https://github.com/ikeicg/MP-Project/assets/125681815/4db0fd87-248a-49c2-a3e8-c79d0819a536)
+![demo3](https://github.com/ikeicg/MP-Project/assets/125681815/decebd30-a10f-49e6-82e7-edb82d8e6b4f)
+![demo4](https://github.com/ikeicg/MP-Project/assets/125681815/f274d8e5-fa23-4550-9a44-40289e029c76)
 
 
 
