@@ -40,14 +40,15 @@ It is a basic **Music Player** App written in Javascript. The songs and other me
 3. Open the entry file in your browser. Enjoy the MP after the stress :joy:
 
 4. **N/B:**
-   * The icons need Internet Connection to render
-   * Hover over the music cards to see the play button
-l
+   - The icons need Internet Connection to render
+   - Hover over the music cards to see the play button
+     l
+
 # Demo
 
 ![demo1](https://github.com/ikeicg/MP-Project/blob/main/demoimg/demo1.png?raw=true)
 
-![demo2](https://github.com/ikeicg/MP-Project/blob/main/demoimg/demo2.png)
+![demo2](https://github.com/ikeicg/MP-Project/blob/main/demoimg/demo2.1.png)
 
 ![demo3](https://github.com/ikeicg/MP-Project/blob/main/demoimg/demo3.png)
 
