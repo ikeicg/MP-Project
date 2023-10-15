@@ -37,7 +37,7 @@ It is a basic **Music Player** App written in Javascript. The songs and other me
 
    - save the file changes
 
-3. Open the entry file in your browser. Enjoy the MP after much stress
+3. Open the entry file in your browser. Enjoy the MP after the stress :joy:
 
 4. **N/B:**
    * The icons need Internet Connection to render
