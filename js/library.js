@@ -1,33 +1,34 @@
-renderAllSongs()
+renderAllSongs();
 
-function renderAllSongs(){
-    document.querySelectorAll('#catalogue-render > *').
-    forEach(x => {
-        x.style.display = 'none'
-    })
+function renderAllSongs() {
+  document.querySelectorAll("#catalogue-render > *").forEach((x) => {
+    x.style.display = "none";
+  });
 
-    document.querySelectorAll('#libraryselect > *').
-    forEach(x => {
-        x.classList.remove('selected')
-    })
+  document.querySelectorAll("#libraryselect > *").forEach((x) => {
+    x.classList.remove("selected");
+  });
 
-    document.querySelector('#selectAllSongs').classList.add('selected')
+  document.querySelector("#selectAllSongs").classList.add("selected");
 
-    let renderSection = document.querySelector('#all-songs')
-    renderSection.style.display = 'grid'
-    renderSection.innerHTML = ''
+  let renderSection = document.querySelector("#all-songs");
+  renderSection.style.display = "grid";
+  renderSection.innerHTML = "";
 
-    let result = allSongs.sort(function(a, b){
-            let x = a.name.toLowerCase();
-            let y = b.name.toLowerCase();
-            if (x < y) {return -1;}
-            if (x > y) {return 1;}
-            return 0;
-        }
-    )
+  let result = allSongs.sort(function (a, b) {
+    let x = a.name.toLowerCase();
+    let y = b.name.toLowerCase();
+    if (x < y) {
+      return -1;
+    }
+    if (x > y) {
+      return 1;
+    }
+    return 0;
+  });
 
-    for(i = 0; i < result.length; i++){
-        renderSection.innerHTML += `
+  for (i = 0; i < result.length; i++) {
+    renderSection.innerHTML += `
         <div class="songcard">
             <div class="songcard-img">
                 <img src=".${result[i].image}" alt="">
@@ -40,41 +41,34 @@ function renderAllSongs(){
                 <h5 class="artistename">${result[i].artiste}</h5>
             </div>
         </div>
-        `
-    }
+        `;
+  }
 
-    document.querySelectorAll('#all-songs .songcard .playsrc').forEach(
-        x => {
-            x.addEventListener('click', () => {
-                currentlyPlaying[0] = x.getAttribute('pltindex')
-                currentlyPlaying[1] = result
-                loadMusic()
-                playMusic()
-
-            }) 
-        }
-    )
+  document.querySelectorAll("#all-songs .songcard .playsrc").forEach((x) => {
+    x.addEventListener("click", () => {
+      currentlyPlaying[0] = x.getAttribute("pltindex");
+      currentlyPlaying[1] = result;
+      loadMusic();
+      playMusic();
+    });
+  });
 }
 
-function renderGenre(){
+function renderGenre() {
+  document.querySelectorAll("#catalogue-render > *").forEach((x) => {
+    x.style.display = "none";
+  });
 
-    document.querySelectorAll('#catalogue-render > *').
-    forEach(x => {
-        x.style.display = 'none'
-    })
+  let renderSection = document.querySelector("#genres");
 
-    let renderSection = document.querySelector('#genres')
+  document.querySelectorAll("#libraryselect > *").forEach((x) => {
+    x.classList.remove("selected");
+  });
 
-    document.querySelectorAll('#libraryselect > *').
-    forEach(x => {
-        x.classList.remove('selected')
-    })
+  document.querySelector("#selectGenre").classList.add("selected");
 
-    document.querySelector('#selectGenre').classList.add('selected')
-
-    
-    renderSection.style.display = 'flex'
-    renderSection.innerHTML = `
+  renderSection.style.display = "flex";
+  renderSection.innerHTML = `
     <div class="genrelist">
                     <div class="genreitem" data-genre="afrobeats" >
                         <div class="genre-img">
@@ -83,9 +77,10 @@ function renderGenre(){
                         </div>
                         <div class="genre-details">
                             <h4 class="genrename">Afro-Beats</h4>
-                            <h5 class="genresize">${allSongs.filter(x => 
-                                x.genre == 'afrobeats'
-                        ).length} songs</h5>
+                            <h5 class="genresize">${
+                              allSongs.filter((x) => x.genre == "afrobeats")
+                                .length
+                            } songs</h5>
                         </div>
                     </div>
 
@@ -98,9 +93,9 @@ function renderGenre(){
                         </div>
                         <div class="genre-details">
                             <h4 class="genrename">Reggae</h4>
-                            <h5 class="genresize">${allSongs.filter(x =>
-                                x.genre == 'reggae'
-                            ).length} songs</h5>
+                            <h5 class="genresize">${
+                              allSongs.filter((x) => x.genre == "reggae").length
+                            } songs</h5>
                         </div>
                     </div>
 
@@ -113,9 +108,10 @@ function renderGenre(){
                         </div>
                         <div class="genre-details">
                             <h4 class="genrename">Country</h4>
-                            <h5 class="genresize">${allSongs.filter(x =>
-                                x.genre == 'country'
-                            ).length} songs</h5>
+                            <h5 class="genresize">${
+                              allSongs.filter((x) => x.genre == "country")
+                                .length
+                            } songs</h5>
                         </div>
                     </div>
 
@@ -128,9 +124,9 @@ function renderGenre(){
                         </div>
                         <div class="genre-details">
                             <h4 class="genrename">Pop</h4>
-                            <h5 class="genresize">${allSongs.filter(x =>
-                                x.genre == 'pop'
-                            ).length} songs</h5>
+                            <h5 class="genresize">${
+                              allSongs.filter((x) => x.genre == "pop").length
+                            } songs</h5>
                         </div>
                     </div>
 
@@ -141,37 +137,37 @@ function renderGenre(){
                         </div>
                         <div class="genre-details">
                             <h4 class="genrename">Gospel</h4>
-                            <h5 class="genresize">${allSongs.filter(x =>
-                                x.genre == 'gospel'
-                            ).length} songs</h5>
+                            <h5 class="genresize">${
+                              allSongs.filter((x) => x.genre == "gospel").length
+                            } songs</h5>
                         </div>
                     </div>
                 </div>
 
                 <div class="playlistrender"> </div>
-    `
-    
-    document.querySelectorAll('.genreitem').forEach(x => {
-        x.addEventListener('click', (e) => {renderGenrePlaylist(e)})
-    })
+    `;
+
+  document.querySelectorAll(".genreitem").forEach((x) => {
+    x.addEventListener("click", (e) => {
+      renderGenrePlaylist(e);
+    });
+  });
 }
 
-function renderGenrePlaylist(e){
+function renderGenrePlaylist(e) {
+  document.querySelectorAll(".genrelist > *").forEach((x) => {
+    x.classList.remove("selected");
+  });
+  e.currentTarget.classList.add("selected");
 
-    document.querySelectorAll('.genrelist > *').
-    forEach(x => {
-        x.classList.remove('selected')
-    })
-    e.currentTarget.classList.add('selected')
+  let renderSection = document.querySelector(".playlistrender");
+  renderSection.innerHTML = "";
+  let result = allSongs.filter(
+    (x) => x.genre == e.currentTarget.getAttribute("data-genre")
+  );
 
-    let renderSection = document.querySelector('.playlistrender')
-    renderSection.innerHTML = ''
-    let result = allSongs.filter(
-        x => ( x.genre == e.currentTarget.getAttribute('data-genre'))
-    )
-
-    for(i = 0; i < result.length; i++){
-        renderSection.innerHTML += `
+  for (i = 0; i < result.length; i++) {
+    renderSection.innerHTML += `
         <div class="playitem">
             <div class="playitem-img">
                 <img src=".${result[i].image}" alt="">
@@ -180,7 +176,7 @@ function renderGenrePlaylist(e){
                 </span>
             </div>
             <div class="playitem-index">
-            ${i+1}
+            ${i + 1}
             </div>
             <div class="playitem-details">
                 <div class="songname">
@@ -191,44 +187,38 @@ function renderGenrePlaylist(e){
                 </div>
             </div>
         </div>
-        `
-    }
+        `;
+  }
 
-    document.querySelectorAll('#genres .playitem .playsrc').forEach(
-        x => {
-            x.addEventListener('click', () => {
-                currentlyPlaying[0] = x.getAttribute('pltindex')
-                currentlyPlaying[1] = result
-                loadMusic()
-                playMusic()
-
-            }) 
-        }
-    )
+  document.querySelectorAll("#genres .playitem .playsrc").forEach((x) => {
+    x.addEventListener("click", () => {
+      currentlyPlaying[0] = x.getAttribute("pltindex");
+      currentlyPlaying[1] = result;
+      loadMusic();
+      playMusic();
+    });
+  });
 }
 
-function renderAutoPlaylist(){
+function renderAutoPlaylist() {
+  document.querySelectorAll("#catalogue-render > *").forEach((x) => {
+    x.style.display = "none";
+  });
 
-    document.querySelectorAll('#catalogue-render > *').
-    forEach(x => {
-        x.style.display = 'none'
-    })
+  document.querySelectorAll("#libraryselect > *").forEach((x) => {
+    x.classList.remove("selected");
+  });
 
-    document.querySelectorAll('#libraryselect > *').
-    forEach(x => {
-        x.classList.remove('selected')
-    })
+  document.querySelector("#selectAutoPlaylist").classList.add("selected");
 
-    document.querySelector('#selectAutoPlaylist').classList.add('selected')
+  let renderSection = document.querySelector("#autoplaylist");
+  renderSection.style.display = "block";
+  renderSection.innerHTML = "";
 
-    let renderSection = document.querySelector('#autoplaylist')
-    renderSection.style.display = 'block'
-    renderSection.innerHTML = ''
+  let result = generateRandomList(allSongs, 10);
 
-    let result = generateRandomList(allSongs, 20)
-
-    for(i = 0; i < result.length; i++){
-        renderSection.innerHTML += `
+  for (i = 0; i < result.length; i++) {
+    renderSection.innerHTML += `
         <div class="playitem">
             <div class="playitem-img">
                 <img src=".${result[i].image}" alt="">
@@ -237,7 +227,7 @@ function renderAutoPlaylist(){
                 </span>
             </div>
             <div class="playitem-index">
-            ${i+1}
+            ${i + 1}
             </div>
             <div class="playitem-details">
                 <div class="songname">
@@ -248,41 +238,37 @@ function renderAutoPlaylist(){
                 </div>
             </div>
         </div>
-        `
-    }
+        `;
+  }
 
-    document.querySelectorAll('#autoplaylist .playitem .playsrc').forEach(
-        x => {
-            x.addEventListener('click', () => {
-                currentlyPlaying[0] = x.getAttribute('pltindex')
-                currentlyPlaying[1] = result
-                loadMusic()
-                playMusic()
-
-            }) 
-        }
-    )
-
+  document.querySelectorAll("#autoplaylist .playitem .playsrc").forEach((x) => {
+    x.addEventListener("click", () => {
+      currentlyPlaying[0] = x.getAttribute("pltindex");
+      currentlyPlaying[1] = result;
+      loadMusic();
+      playMusic();
+    });
+  });
 }
 
 function generateRandomList(arr, lent) {
-    let result = [];
+  let result = [];
 
-    while (result.length < lent) {
-        const randomIndex = Math.floor(Math.random() * arr.length);
-        const item = arr[randomIndex];
-        if (!result.includes(item)){
-            result.push(item)
-        }
+  while (result.length < lent) {
+    const randomIndex = Math.floor(Math.random() * arr.length);
+    const item = arr[randomIndex];
+    if (!result.includes(item)) {
+      result.push(item);
     }
+  }
 
-    return result
+  return result;
 }
 
-document.querySelector('#selectAllSongs').addEventListener('click', renderAllSongs)
-document.querySelector('#selectGenre').addEventListener('click', renderGenre)
-document.querySelector('#selectAutoPlaylist').addEventListener('click', renderAutoPlaylist)
-
-
-
-
+document
+  .querySelector("#selectAllSongs")
+  .addEventListener("click", renderAllSongs);
+document.querySelector("#selectGenre").addEventListener("click", renderGenre);
+document
+  .querySelector("#selectAutoPlaylist")
+  .addEventListener("click", renderAutoPlaylist);

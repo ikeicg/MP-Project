@@ -1,4 +1,4 @@
-const allSongs = [
+let allSongs = [
   {
     name: "song name",
     artiste: "artiste name",
