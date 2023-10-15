@@ -45,8 +45,8 @@ l
 
 ![demo1](https://github.com/ikeicg/MP-Project/blob/main/demoimg/demo1.png?raw=true)
 
-![demo2](https://github.com/ikeicg/MP-Project/blob/demoimg/demo2.png)
+![demo2](https://github.com/ikeicg/MP-Project/blob/main/demoimg/demo2.png)
 
-![demo3](https://github.com/ikeicg/MP-Project/blob/demoimg/demo3.png)
+![demo3](https://github.com/ikeicg/MP-Project/blob/main/demoimg/demo3.png)
 
-![demo4](https://github.com/ikeicg/MP-Project/blob/demoimg/demo4.png)
+![demo4](https://github.com/ikeicg/MP-Project/blob/main/demoimg/demo4.png)
