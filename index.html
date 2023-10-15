@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Music Player</title>
+    <link rel="icon" type="image/png" href="./img/headerimg.png" />
+    <link rel="stylesheet" href="./styles/index.css" />
+    <link rel="stylesheet" href="./styles/musicplayer.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+  </head>
+  <body>
+    <header id="navbar">
+      <div id="logobox">
+        <img src="./img/headerimg.png" alt="" width="50px" />Music
+      </div>
+
+      <div class="navpageslg navi">
+        <a class="navlinks selected" href="./index.html">Home</a>
+        <a class="navlinks" href="./library.html">Library</a>
+        <a class="navlinks" href="./search.html">Search</a>
+      </div>
+
+      <div class="navpagesmd navi">
+        <a class="navlinks selected" href="./index.html"
+          ><i class="material-icons">home</i></a
+        >
+        <a class="navlinks" href="./library.html"
+          ><i class="material-icons">library_music</i></a
+        >
+        <a class="navlinks" href="./search.html"
+          ><i class="material-icons">search</i></a
+        >
+      </div>
+
+      <div class="profile">
+        <i style="font-size: 22px" class="material-icons">person</i>
+      </div>
+    </header>
+
+    <div id="root">
+      <div id="banner">
+        <h2 class="sectiontag">What's the mood ?</h2>
+
+        <div class="slide-section">
+          <div class="bannerslide fade">
+            <div class="bannerimage">
+              <img src="./img/genreimg/reggae.png" alt="" />
+            </div>
+
+            <h1 class="bannertext">Reggae</h1>
+          </div>
+          <div class="bannerslide fade">
+            <div class="bannerimage">
+              <img src="./img/genreimg/afrobeats.png" alt="" />
+            </div>
+            <p class="bannertext">Afro-Beats</p>
+          </div>
+          <div class="bannerslide fade">
+            <div class="bannerimage">
+              <img src="./img/genreimg/country.png" alt="" />
+            </div>
+            <p class="bannertext">Country</p>
+          </div>
+          <div class="bannerslide fade">
+            <div class="bannerimage">
+              <img src="./img/genreimg/gospel.png" alt="" />
+            </div>
+            <p class="bannertext">Gospel</p>
+          </div>
+          <div class="bannerslide fade">
+            <div class="bannerimage">
+              <img src="./img/genreimg/pop.png" alt="" />
+            </div>
+            <p class="bannertext">Pop</p>
+          </div>
+        </div>
+      </div>
+
+      <div id="quickpick">
+        <div class="qpheader">
+          <h2 class="sectiontag">Quick Picks <span>start listening</span></h2>
+          <div class="prevnexticons">
+            <i class="material-icons" id="scroll-left"> arrow_back_ios_new </i>
+            <i class="material-icons" id="scroll-right"> arrow_forward_ios </i>
+          </div>
+        </div>
+
+        <div class="songcards"></div>
+      </div>
+    </div>
+
+    <div id="mpfooter">
+      <div id="bigmp">
+        <div class="bigtrackimage">
+          <img src="" />
+        </div>
+
+        <div class="bigplaylist">
+          <h3>UP NEXT</h3>
+
+          <div class="playlistrender2"></div>
+        </div>
+      </div>
+
+      <div id="smallmp">
+        <div id="progressarea">
+          <div id="progressbar"></div>
+        </div>
+
+        <div id="trackmeta">
+          <div id="controls">
+            <div class="trackcontrols">
+              <i class="material-icons" id="skipprev">skip_previous</i>
+              <i class="material-icons" id="play-pause">play_arrow</i>
+              <i class="material-icons" id="skipnext">skip_next</i>
+            </div>
+
+            <div id="timestamp" class="smhide">
+              <p>
+                <span id="currenttime">0:00</span> /
+                <span id="duration">0:00</span>
+              </p>
+            </div>
+          </div>
+
+          <div id="trackdata">
+            <div class="trackimg smhide2">
+              <img src="" />
+            </div>
+            <div class="trackdetails">
+              <p id="trackname"></p>
+              <p id="trackartiste"></p>
+            </div>
+            <div id="trackaudio">
+              <audio src=""></audio>
+            </div>
+          </div>
+
+          <div class="controls2 trackcontrols">
+            <i class="material-icons playlistcontrols">repeat</i>
+            <i class="material-icons showmore">arrow_drop_down</i>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./js/db.js"></script>
+    <script src="./js/musicplayer.js"></script>
+    <script src="./js/index.js"></script>
+  </body>
+</html>

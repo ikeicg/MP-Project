@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MusicPlayer-Library</title>
+    <link rel="stylesheet" href="./styles/library.css" />
+    <link rel="stylesheet" href="./styles/musicplayer.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+  </head>
+  <body>
+    <header id="navbar">
+      <div id="logobox">
+        <img src="./img/headerimg.png" alt="" width="50px" />Music
+      </div>
+
+      <div class="navpageslg navi">
+        <a class="navlinks" href="./index.html">Home</a>
+        <a class="navlinks selected" href="./library.html">Library</a>
+        <a class="navlinks" href="./search.html">Search</a>
+      </div>
+
+      <div class="navpagesmd navi">
+        <a class="navlinks" href="./index.html"
+          ><i class="material-icons">home</i></a
+        >
+        <a class="navlinks selected" href="./library.html"
+          ><i class="material-icons">library_music</i></a
+        >
+        <a class="navlinks" href="./search.html"
+          ><i class="material-icons">search</i></a
+        >
+      </div>
+
+      <div class="profile">
+        <i style="font-size: 22px" class="material-icons">person</i>
+      </div>
+    </header>
+
+    <div class="root">
+      <h2 class="header">Your Library</h2>
+
+      <div id="libraryselect">
+        <div class="librarycatalogue" id="selectAllSongs">All-Songs</div>
+        <div class="librarycatalogue" id="selectGenre">Genre</div>
+        <div class="librarycatalogue" id="selectAutoPlaylist">
+          Auto-Playlist
+        </div>
+      </div>
+
+      <div id="catalogue-render">
+        <div id="all-songs"></div>
+
+        <div id="genres">
+          <div class="playlistrender"></div>
+        </div>
+
+        <div id="autoplaylist"></div>
+      </div>
+    </div>
+
+    <div id="mpfooter">
+      <div id="bigmp">
+        <div class="bigtrackimage">
+          <img src="" />
+        </div>
+
+        <div class="bigplaylist">
+          <h3>UP NEXT</h3>
+
+          <div class="playlistrender2"></div>
+        </div>
+      </div>
+
+      <div id="smallmp">
+        <div id="progressarea">
+          <div id="progressbar"></div>
+        </div>
+
+        <div id="trackmeta">
+          <div id="controls">
+            <div class="trackcontrols">
+              <i class="material-icons" id="skipprev">skip_previous</i>
+              <i class="material-icons" id="play-pause">play_arrow</i>
+              <i class="material-icons" id="skipnext">skip_next</i>
+            </div>
+
+            <div id="timestamp" class="smhide">
+              <p>
+                <span id="currenttime">0:00</span> /
+                <span id="duration">0:00</span>
+              </p>
+            </div>
+          </div>
+
+          <div id="trackdata">
+            <div class="trackimg smhide2">
+              <img src="" />
+            </div>
+            <div class="trackdetails">
+              <p id="trackname"></p>
+              <p id="trackartiste"></p>
+            </div>
+            <div id="trackaudio">
+              <audio src=""></audio>
+            </div>
+          </div>
+
+          <div class="controls2 trackcontrols">
+            <i class="material-icons playlistcontrols">repeat</i>
+            <i class="material-icons showmore">arrow_drop_down</i>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./js/db.js"></script>
+    <script src="./js/musicplayer.js"></script>
+    <script src="./js/library.js"></script>
+  </body>
+</html>

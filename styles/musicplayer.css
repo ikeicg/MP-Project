@@ -1,0 +1,331 @@
+#mpfooter{
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: black;
+    display: none;
+    cursor: pointer;
+    user-select: none;
+}
+
+
+/* Enlarged player section  */
+
+
+#bigmp{
+    display: none;
+    height: calc(100vh - 110px);
+    overflow: hidden;
+}
+
+.bigtrackimage{
+    width: 70%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bigtrackimage img{
+    object-fit: cover;
+    max-height: 90%;
+    max-width: 90%;
+}
+
+.bigplaylist{
+    width: 30%;
+    padding-right: 20px;
+    padding-top: 20px;
+}
+
+.bigplaylist h3{
+    text-align: center;
+    border-bottom: 3px solid white;
+    padding-bottom: 10px;
+}
+
+/* playlist section  */
+
+.playlistrender2{
+    margin: 30px 0;
+    max-height: 80%;
+    overflow-y: scroll;
+}
+
+.playlistrender2::-webkit-scrollbar {
+    width: 10px;
+}
+
+.playlistrender2::-webkit-scrollbar-thumb {
+background: #888; 
+}
+  
+
+.playitem2{ 
+    display: flex;
+    align-items: center;
+    margin: 5px 0;
+    font-family: 'Roboto', sans-serif;
+    border-bottom: 1px solid gray;
+    padding: 10px 0;
+}
+
+.playitem-img2{ 
+    width: 10%;
+    position: relative;
+}
+
+.playitem-img2 img{
+    width: 100%;
+    object-fit: cover;
+}
+
+.playitem-index2{
+    width: 15%;
+    text-align: center;
+    font-weight: 900;
+}
+
+.playitem-details2{
+    width: 75%;
+}
+
+.playitem-details2 .songname{
+    font-weight: 600;
+}
+
+.playitem-details2 .songmeta{
+    opacity: 0.7;
+}
+
+.playitem2 .cardicons2{
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translateX(50%) translateY(-50%);
+    background: rgba(0, 0, 0, 0.7);
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+}
+
+.playitem2:hover .cardicons2{
+    opacity: 1;
+}
+
+.cardicons2 i{
+    position: absolute;
+    top: 15%;
+    right: 15%;
+}
+
+
+@media screen and (max-width: 1000px){
+
+    .playlistrender{
+        margin-left: 20px;
+    }
+
+    .playitem-img{
+        width: 55px;
+    }
+
+    .playitem-index{
+        width: 20%;
+    }
+
+    .playitem-details{
+        width: 65%;
+        font-size: 15px;
+    }
+
+    #bigmp{
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .bigtrackimage{
+        width: 100%;
+        height: 50%;
+    }
+
+    .bigplaylist{
+        width: 100%;
+        padding: 0 10px;
+        height: 50%;
+    }
+
+}
+
+
+
+
+
+
+/* Small Player Bar section  */
+
+#smallmp{
+    display: flex;
+    flex-direction: column;
+}
+
+#progressarea{
+    width: 100%;
+    height: 5px;
+    background-color: rgba(255, 255, 255, 0.6);
+    overflow: hidden;
+}
+
+#progressbar{
+    height: inherit;
+    width: 0%;
+    background-color: red;
+    position: absolute;
+}
+
+#progressbar::before{
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: red;
+    top: 50%;
+    transform: translateY(-50%); 
+    right: -5px;
+    border: 1px solid black;
+    opacity: 0;
+    transition: opacity 0.2s ease-in;
+}
+
+#progressarea:hover #progressbar::before{
+    opacity: 1
+}
+
+#trackmeta{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+#trackmeta > * {
+    display: flex;
+    align-items: center;
+}
+
+
+#trackmeta #trackdata{
+    width: 50%;
+    justify-content: center;
+}
+
+#trackmeta #controls{
+    width: 25%;
+    justify-content: left;
+}
+
+#trackmeta .controls2{
+    width: 25%;
+    justify-content: right;
+}
+
+.trackcontrols{
+    display: flex;
+    align-items: center;
+}
+
+.trackcontrols i{
+    font-size: 30px;
+    margin: 0 10px;
+}
+
+#play-pause{
+    font-size: 40px;
+}
+
+#timestamp span{
+    color: rgba(255, 255, 255, 0.7);
+    font-weight: 600;
+}
+
+.trackimg{
+    width: 40px;
+    border-radius: 3px;
+    margin: 0 20px;
+    overflow: hidden;
+}
+
+.trackimg img{
+    width: 100%;
+}
+
+#trackname{
+    font-weight: 600;
+    width: 155px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+#trackartiste{
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.7);
+    width: 155px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.playlistcontrols, .showmore{
+    color: rgba(255, 255, 255, 0.7);
+}
+
+@media screen and (max-width: 1000px){
+    
+    .smhide{
+        display: none;
+    }
+
+    .trackcontrols i{
+        font-size: 25px;
+        margin: 0 5px;
+    }
+
+    #play-pause{
+        font-size: 30px;
+    }
+}
+
+@media screen and (max-width: 600px){
+
+    .smhide2{
+        display: none;
+    }
+    
+    #trackmeta #controls{
+        width: 30%;
+        justify-content: left;
+    }
+    
+    #trackmeta .controls2{
+        width: 20%;
+        justify-content: right;
+    }
+    
+    .trackcontrols i{
+        font-size: 20px;
+        margin: 0 5px;
+    }
+
+    #play-pause{
+        font-size: 25px;
+    }
+
+    #trackname, #trackartiste{
+        text-align: center;
+    }
+}
+
+

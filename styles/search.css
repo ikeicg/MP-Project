@@ -1,0 +1,229 @@
+/* General Section  */
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+}
+
+body{
+    background-color: black;
+}
+
+/* Navbar Section  */
+
+#navbar{
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2px;
+    font-size: 20px;
+    font-weight: 600;
+    font-family: 'Roboto', sans-serif;
+    border-bottom: 2px solid gray;
+    cursor: pointer;
+    user-select: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    background-color: black;
+    z-index: 100;
+}
+
+#logobox{
+    display: flex;
+    align-items: center;
+}
+
+.navlinks {
+    text-decoration: none;
+    color: grey;
+    padding: 0 30px;
+    display: flex;
+}
+
+.navlinks:hover, .navi .selected{
+    color: white;
+}
+
+.navpageslg{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navpagesmd{
+    display: none;
+}
+
+.profile{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #ff0000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 15px;
+}
+
+@media screen and (max-width: 600px){
+
+    .navpagesmd{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .navpageslg, .profile{
+        display: none;
+    }
+
+    .navlinks{
+        padding: 0 20px;
+    }
+
+}
+
+
+/* search section  */
+
+
+.root{
+    margin-top: 80px;
+}
+
+#search{
+    width: 800px;
+    max-width: 90%;
+    min-height: 500px;
+    background: rgba(33, 33, 33, 1);
+    color: rgba(255, 255, 255, 0.7);
+    margin: 0 auto;
+    border-radius: 5px;
+}
+
+.searchinput{
+    display: flex;
+    padding: 5px;
+    align-items: center;
+    border-bottom: 1px solid gray;
+}
+
+
+.searchinput input{
+    width: 95%;
+    height: 50px;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 20px;
+    padding: 15px;
+    font-weight: 600;
+}
+
+.searchinput i{
+    width: 10%;
+    text-align: center;
+    padding: 15px 0;
+}
+
+@media screen and (max-width: 600px){
+
+    #search{
+        width: 330px;
+    }
+
+    .searchinput input{
+        width: 90%;
+        font-size: 20px;
+    }
+}
+
+
+/* playlist render section  */
+
+    .playlistrender{
+    margin-top: 50px;
+    }
+
+    .playitem{ 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 0;
+    font-family: 'Roboto', sans-serif;
+    }
+
+    .playitem-img{ 
+    width: 6%;
+    position: relative;
+    }
+
+    .playitem-img img{
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .playitem-index{
+        width: 10%;
+        text-align: center;
+        font-weight: 900;
+    }
+
+    .playitem-details{
+        width: 80%;
+    }
+
+    .playitem-details .songname{
+        font-weight: 600;
+    }
+
+    .playitem-details .songmeta{
+        opacity: 0.7;
+    }
+
+    .playitem .cardicons{
+        position: absolute;
+        top: 50%;
+        right: 50%;
+        transform: translateX(50%) translateY(-50%);
+        background: rgba(0, 0, 0, 0.7);
+        width: 105%;
+        height: 100%;
+        opacity: 0;
+    }
+    
+    .playitem:hover .cardicons{
+        opacity: 1;
+    }
+    
+    .cardicons i{
+        position: absolute;
+        top: 25%;
+        right: 25%;
+        font-size: 30px;
+    }
+
+
+
+    @media screen and (max-width: 600px){
+
+        .playitem-img{
+            width: 13%;
+        }
+
+        .playitem-index{
+            width: 20%;
+        }
+
+        .playitem-details{
+            width: 60%;
+            font-size: 13px;
+        }
+
+    }
