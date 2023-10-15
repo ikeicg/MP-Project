@@ -1,4 +1,3 @@
-# MP-Project
 
 It is a basic **Music Player** App written in Javascript. The songs and other media files are stored/based in the local directory (no APIs). The entry file is **_index.html_**
 
@@ -42,14 +41,15 @@ It is a basic **Music Player** App written in Javascript. The songs and other me
 4. **N/B:**
    - The icons need Internet Connection to render
    - Hover over the music cards to see the play button
-     l
 
 # Demo
 
-![demo1](https://github.com/ikeicg/MP-Project/blob/main/demoimg/demo1.png?raw=true)
+![demo4](https://github.com/ikeicg/MP-Project/assets/125681815/f274d8e5-fa23-4550-9a44-40289e029c76)
+![demo3](https://github.com/ikeicg/MP-Project/assets/125681815/decebd30-a10f-49e6-82e7-edb82d8e6b4f)
+![demo2 1](https://github.com/ikeicg/MP-Project/assets/125681815/4db0fd87-248a-49c2-a3e8-c79d0819a536)
+![demo1](https://github.com/ikeicg/MP-Project/assets/125681815/90071cf7-6704-4127-aba3-6e7b8865e70f)
 
-![demo2](https://github.com/ikeicg/MP-Project/blob/main/demoimg/demo2.1.png)
 
-![demo3](https://github.com/ikeicg/MP-Project/blob/main/demoimg/demo3.png)
 
-![demo4](https://github.com/ikeicg/MP-Project/blob/main/demoimg/demo4.png)
+
+
