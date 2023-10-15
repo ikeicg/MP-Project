@@ -39,7 +39,9 @@ It is a basic **Music Player** App written in Javascript. The songs and other me
 
 3. Open the entry file in your browser. Enjoy the MP after much stress
 
-4. **N/B:** The icons need Internet Connection to render
+4. **N/B:**
+   * The icons need Internet Connection to render
+   * Hover over the music cards to see the play button
 l
 # Demo
 
