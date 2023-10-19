@@ -4,7 +4,7 @@ It is a basic **Music Player** App written in Javascript. The songs and other me
 # Features
 
 1. **Music Play**
-2. **Music Controls including Play/Pause, Next/Previous Songs, Shuffle/Repeat One/Repeat All and Progress Bar Seeking**
+2. **Music Controls including Play/Pause, Next/Previous, Shuffle/Repeat-One/Repeat-All and ProgressBar Seek**
 3. **Genre Classification**
 4. **Playlist Generation**
 5. **Music Search**
